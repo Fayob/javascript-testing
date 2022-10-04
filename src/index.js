@@ -1,4 +1,7 @@
 // Test 1
 const stringLength = (string) => string.length;
 
-module.exports = { stringLength };
+// Task 2
+const reverseString = (string) => string.split('').reverse().join('');
+
+module.exports = { stringLength, reverseString };
