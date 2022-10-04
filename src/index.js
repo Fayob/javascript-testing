@@ -9,6 +9,7 @@ const stringLength = (string) => {
 // Task 2
 const reverseString = (string) => string.split('').reverse().join('');
 
+// Task 3
 class Calculator {
   constructor(firstValue, secondValue) {
     this.firstValue = firstValue;
@@ -32,4 +33,12 @@ class Calculator {
   }
 }
 
-module.exports = { stringLength, reverseString, Calculator };
+// Task 4
+const capitalize = (string) => {
+  const firstLetter = string.split('')[0].toUpperCase();
+  return firstLetter + string.slice(1);
+};
+
+module.exports = {
+  stringLength, reverseString, Calculator, capitalize,
+};
