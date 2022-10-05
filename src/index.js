@@ -24,20 +24,32 @@ class Calculator {
   }
 
   subtract() {
+    if (typeof this.firstValue !== 'number' || typeof this.secondValue !== 'number') {
+      throw new Error('Invalid Input');
+    }
     return this.firstValue - this.secondValue;
   }
 
   multiply() {
+    if (typeof this.firstValue !== 'number' || typeof this.secondValue !== 'number') {
+      throw new Error('Invalid Input');
+    }
     return this.firstValue * this.secondValue;
   }
 
   divide() {
+    if (typeof this.firstValue !== 'number' || typeof this.secondValue !== 'number') {
+      throw new Error('Invalid Input');
+    }
     return this.firstValue / this.secondValue;
   }
 }
 
 // Task 4
 const capitalize = (string) => {
+  if (typeof string !== 'string') {
+    throw new Error('Invalid Input');
+  }
   const firstLetter = string.split('')[0].toUpperCase();
   return firstLetter + string.slice(1);
 };
