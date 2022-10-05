@@ -17,6 +17,9 @@ class Calculator {
   }
 
   add() {
+    if (typeof this.firstValue !== 'number' || typeof this.secondValue !== 'number') {
+      throw new Error('Invalid Input');
+    }
     return this.firstValue + this.secondValue;
   }
 
