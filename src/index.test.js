@@ -23,6 +23,9 @@ it('should reverse entered string', () => {
 
 // Task 3
 describe('calculator', () => {
+  test('should throw error if the argument is not a number', () => {
+    expect(() => new Calculator('r', 4).add()).toThrow(Error);
+  });
   test('should return the addition of two values', () => {
     expect(new Calculator(5, 5).add()).toBe(10);
   });
